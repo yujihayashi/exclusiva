@@ -1,4 +1,26 @@
 @font-face {
+    font-family: 'mission_scriptregular';
+    src: url('mission-script-webfont.eot');
+    src: url('mission-script-webfont.eot?#iefix') format('embedded-opentype'),
+         url('mission-script-webfont.woff2') format('woff2'),
+         url('mission-script-webfont.woff') format('woff'),
+         url('mission-script-webfont.ttf') format('truetype'),
+         url('mission-script-webfont.svg#mission_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'coneria_script_demoregular';
+    src: url('demo_coneriascript-webfont.eot');
+    src: url('demo_coneriascript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('demo_coneriascript-webfont.woff2') format('woff2'),
+         url('demo_coneriascript-webfont.woff') format('woff'),
+         url('demo_coneriascript-webfont.ttf') format('truetype'),
+         url('demo_coneriascript-webfont.svg#coneria_script_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'GothamMediumItalic';
     src: url('gotham-mediumitalic.eot');
     src: url('gotham-mediumitalic.eot') format('embedded-opentype'),
