@@ -137,6 +137,7 @@ h4 strong,
 }
 .chamada .desc,
 .chamada .resumo,
+.chamada .resumo h1,
 .box-comentario .autor,
 .footer-header,
 .box-bg .box-header .media-heading {
@@ -321,6 +322,7 @@ CLASSES START
   position: relative;
   margin: 0 0 20px;
   text-align: right;
+  overflow: hidden;
 }
 .box-chamadas .chamada .imagem {
   position: relative;
@@ -331,7 +333,7 @@ CLASSES START
 .box-chamadas .chamada .imagem a {
   display: block;
   width: 100%;
-  height: 272px;
+  height: 275px;
   background: no-repeat center;
   background-size: cover;
 }
@@ -342,10 +344,17 @@ CLASSES START
   z-index: 2;
 }
 .box-chamadas .chamada .resumo {
-  font-size: 46px;
+  padding: 15px 30px;
 }
 .box-chamadas .chamada .resumo,
-.box-chamadas .chamada .resumo a {
+.box-chamadas .chamada .resumo h1 {
+  font-size: 46px;
+  line-height: 1;
+}
+.box-chamadas .chamada .resumo,
+.box-chamadas .chamada .resumo h1,
+.box-chamadas .chamada .resumo a,
+.box-chamadas .chamada .resumo h1 a {
   color: #FFF;
 }
 .box-chamadas .chamada .desc {
@@ -367,8 +376,16 @@ CLASSES START
 .box-chamadas .chamada.destaque .imagem a {
   height: 570px;
 }
+.box-chamadas .chamada.destaque .hover {
+  width: 480px;
+}
 .box-chamadas .chamada.destaque .desc {
   font-size: 25px;
+  background-image: url(../imagem/site/bg-chamada-destaque-desc.png);
+  width: 480px;
+  height: 111px;
+  line-height: 1;
+  padding-top: 0;
 }
 .box-servicos {
   margin: 0 0 50px;
