@@ -215,7 +215,7 @@ ESTRUTURA START
   line-height: 1;
 }
 .extra-central {
-  padding: 20px 0 50px;
+  padding: 0px 0 50px;
 }
 .extra-social {
   text-align: center;
@@ -256,6 +256,9 @@ ESTRUTURA START
 }
 .extra-footer small {
   font-size: 10px;
+}
+.home .extra-central {
+  padding-top: 20px;
 }
 /**********************************************************************************************
 ESTRUTURA END
@@ -555,6 +558,34 @@ CLASSES START
 .pixel {
   width: 100%;
   height: 100%;
+}
+.page-header {
+  padding-top: 54px;
+  height: 228px;
+  background: url(../imagem/site/bg-page-header.jpg) no-repeat center;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 40px;
+}
+.page-header h1,
+.page-header h2,
+.page-header h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 60px;
+}
+.page-header h1,
+.page-header h2,
+.page-header h3,
+.page-header h1 a,
+.page-header h2 a,
+.page-header h3 a {
+  color: #FFF;
+}
+.page-header .content {
+  display: inline-block;
+  border: 1px solid #FFF;
+  padding: 20px 40px;
 }
 .servico {
   margin: 0 0 15px;
