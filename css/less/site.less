@@ -43,8 +43,9 @@ hr.lg {border-width:3px;border-color: #1e1e1e;}
 /*
 FONTS START
 **********************************************************************************************/
-h1 strong, h2 strong, h3 strong, h4 strong, .btn, .site-header .navbar-nav, .header-right, .site-footer {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
-.footer-header, .box-bg .box-header .media-heading {font-family: 'GothamLightItalic', Arial, sans-serif;font-weight: normal;}
+.chamada .desc strong, .servico .media-heading, .box-servicos .box-header .media-heading, .box-comentario .box-header .media-heading, h1 strong, h2 strong, h3 strong, h4 strong, .btn, .site-header .navbar-nav, .header-right, .site-footer {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
+.chamada .desc, .chamada .resumo, .box-comentario .autor, .footer-header, .box-bg .box-header .media-heading {font-family: 'GothamLightItalic', Arial, sans-serif;font-weight: normal;}
+.box-comentario .comentario {font-family: 'GothamBold', Arial, sans-serif;font-weight: normal;}
 .site-footer small {font-family: Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
@@ -78,7 +79,7 @@ ESTRUTURA START
     }
 }
 .extra-central {
-    padding:20px 0 30px;
+    padding:20px 0 50px;
     .site-central {}
 }
 .extra-social {
@@ -128,8 +129,37 @@ CLASSES START
         &:hover {color: #000;}
     }
 }
+.box-chamadas {
+    .chamada {
+        position: relative;margin:0 0 20px;text-align: right;
+        .imagem {
+            position: relative;z-index: 1;width: 100%;display: block;
+            a {display: block;width: 100%;height: 272px;background:no-repeat center;background-size:cover;}
+        }
+        .hover {position: absolute;right:0;bottom:0;z-index: 2;}
+        .resumo {
+            font-size: 46px;
+            &, a {color: #FFF;}
+        }
+        .desc {
+            background: url(../imagem/site/bg-chamada-desc.png) no-repeat left top;width: 360px;height: 85px;font-size: 16px;padding:27px 15px 0px 90px;
+            > a {display: inline-block;vertical-align: middle;max-width: 96%;}
+            &, a {color: #3d3d3d;}
+        }
+        &.destaque {
+            .imagem {
+                a {height: 570px;}
+            }
+            .desc {font-size: 25px;}
+        }
+    }
+}
 .box-servicos {
     margin:0 0 50px;
+    .box-header {
+        margin: 8px 0 15px;
+        .media-heading {font-size: 30px;color: #3d3d3d;}
+    }
 }
 .box-galeria, .box-video, .box-dicas {
     margin-bottom: 50px;color: #3d3d3d;
@@ -153,6 +183,19 @@ CLASSES START
     .box-header {
         .media-heading {font-size: 25px;}
     }
+}
+.box-comentario {
+    background: #fed61c url(../imagem/site/bg-box-yellow.png) no-repeat right bottom;height: 210px;text-align: center;position: relative;
+    .box-header {
+        padding:25px 30px 15px;
+        .media-heading {font-size: 20px;color: #f09029;}
+    }
+    .box-content {color: #1e1e1e;position: relative;padding:0px 106px 0;}
+    .aspas-left, .aspas-right {position: absolute;top: 12px;}
+    .aspas-left {left:18px;}
+    .aspas-right {right:18px;}
+    .autor {font-size: 18px;}
+    .comentario {font-size: 14px;margin:0 0 15px;line-height: 1.2;}
 }
 
 .cycle-nav {
@@ -181,6 +224,12 @@ CLASSES START
 
 .pixel {width: 100%;height: 100%;}
 
+.servico {
+    margin:0 0 15px;
+    .imagem {display: inline-block;width: 95px;height: 102px;background: #ffb400;text-align: center;}
+    .media-heading {font-size: 25px;color: #3d3d3d;text-transform: uppercase;margin:5px 0;}
+    .media-body {line-height: 1.2;}
+}
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
 .relative {position: relative;}
 /**********************************************************************************************
