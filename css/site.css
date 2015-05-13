@@ -17,8 +17,8 @@ NON-RESPONSIVE START
   width: 960px;
 }
 .navbar-nav > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */
@@ -83,7 +83,7 @@ NON-RESPONSIVE START
 .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
 .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
   color: #fff !important;
-  background-color: #428bca !important;
+  background-color: #fed61c !important;
 }
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a,
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -95,11 +95,11 @@ NON-RESPONSIVE START
 NON-RESPONSIVE END
 */
 ::selection {
-  background-color: #812d2a;
+  background-color: #f09029;
   color: #FFF;
 }
 ::-moz-selection {
-  background-color: #812d2a;
+  background-color: #f09029;
   color: #FFF;
 }
 small {
@@ -113,11 +113,26 @@ a,
 button {
   transition: all 0.25s ease 0s;
 }
+hr.lg {
+  border-width: 3px;
+  border-color: #1e1e1e;
+}
 /*
 FONTS START
 **********************************************************************************************/
-.box-chamada {
-  font-family: 'robotoblack', Arial, sans-serif;
+.btn,
+.site-header .navbar-nav,
+.header-right,
+.site-footer {
+  font-family: 'GothamBlack', Arial, sans-serif;
+  font-weight: normal;
+}
+.footer-header {
+  font-family: 'GothamLightItalic', Arial, sans-serif;
+  font-weight: normal;
+}
+.site-footer small {
+  font-family: Arial, sans-serif;
   font-weight: normal;
 }
 /**********************************************************************************************
@@ -126,6 +141,105 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
+.extra-header,
+.extra-central,
+.extra-footer {
+  min-width: 960px;
+}
+.extra-header .line-1 {
+  background: url(../imagem/site/bg-header.jpg) no-repeat center top;
+  height: 90px;
+}
+.extra-header .navbar {
+  border: 0;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.extra-header .navbar-nav {
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+}
+.extra-header .navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+.extra-header .social-header a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.extra-header .social-header a + a {
+  margin-left: 15px;
+}
+.extra-header .header-right {
+  color: #000;
+  text-align: right;
+  padding-top: 34px;
+}
+.extra-header .header-right span {
+  display: inline-block;
+}
+.extra-header .header-right > .content {
+  display: inline-block;
+  background: #FFF;
+  height: 56px;
+  padding: 14px 5px 14px 15px;
+  margin-right: 34px;
+}
+.extra-header .phone-header {
+  margin-left: 30px;
+}
+.extra-header .phone-header > .content {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+.extra-central {
+  padding: 20px 0 30px;
+}
+.extra-social {
+  text-align: center;
+  background: url(../imagem/site/mosaico.jpg) repeat center;
+}
+.extra-social .extra-1,
+.extra-social .extra-2,
+.extra-social .content {
+  display: inline-block;
+}
+.extra-social .extra-1 {
+  background: url(../imagem/site/bg-social-left.png) repeat-y left center;
+  padding-left: 93px;
+}
+.extra-social .extra-2 {
+  background: url(../imagem/site/bg-social-right.png) repeat-y right center;
+  padding-right: 93px;
+}
+.extra-social .content {
+  padding: 40px 40px;
+  background: #FFF;
+}
+.extra-social .content > a + a {
+  margin-left: 15px;
+}
+.extra-footer {
+  background: #000;
+  text-align: center;
+  color: #e1e1e1;
+  padding: 18px 0;
+}
+.extra-footer .footer-header {
+  text-transform: uppercase;
+  display: block;
+  font-size: 18px;
+  color: #FFF;
+  margin: 15px 0;
+}
+.extra-footer small {
+  font-size: 10px;
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -149,6 +263,46 @@ CLASSES START
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
   border-radius: 150px;
+}
+.btn {
+  text-transform: uppercase;
+}
+.btn .ycon-arrow-right-white,
+.btn .ycon-arrow-right {
+  margin-left: 15px;
+  margin-top: -3px;
+}
+.btn-border {
+  border: 3px solid;
+  background-color: transparent;
+}
+.btn-border:hover {
+  color: #FFF;
+}
+.btn-border.btn-warning {
+  border-color: #ffb400;
+  color: #ffb400;
+}
+.btn-border.btn-primary {
+  border-color: #fed61c;
+  color: #fed61c;
+}
+.btn-border.btn-default {
+  border-color: #cecece;
+  color: #3d3d3d;
+}
+.btn-border.btn-default:hover {
+  color: #000;
+}
+.box-galeria .box-bg {
+  background: #fed61c;
+}
+.cycle-nav span {
+  display: inline-block;
+  cursor: pointer;
+}
+.form-control {
+  box-shadow: none;
 }
 .imagem {
   display: inline-block;

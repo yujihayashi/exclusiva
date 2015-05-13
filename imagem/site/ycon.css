@@ -1,0 +1,18 @@
+.ycon{ background:url("ycon.png") top left no-repeat; }
+.ycon-point-gray-left{ width:55px; height:111px; background-position:-1px -1px; }
+.ycon-point-right{ width:47px; height:97px; background-position:-57px -1px; }
+.ycon-point-yellow-left{ width:47px; height:95px; background-position:-105px -1px; }
+.ycon-cycle-prev{ width:44px; height:70px; background-position:-1px -113px; }
+.ycon-cycle-next{ width:44px; height:70px; background-position:-46px -113px; }
+.ycon-aspas-right{ width:68px; height:45px; background-position:-91px -113px; }
+.ycon-aspas-left{ width:68px; height:45px; background-position:-1px -184px; }
+.ycon-instagram{ width:158px; height:36px; background-position:-1px -230px; }
+.ycon-facebook{ width:159px; height:31px; background-position:-1px -267px; }
+.ycon-twitter{ width:170px; height:31px; background-position:-1px -299px; }
+.ycon-phone-gray{ width:26px; height:26px; background-position:-70px -184px; }
+.ycon-instagram-sm{ width:22px; height:22px; background-position:-97px -184px; }
+.ycon-facebook-sm{ width:11px; height:22px; background-position:-153px -1px; }
+.ycon-twitter-sm{ width:21px; height:18px; background-position:-120px -184px; }
+.ycon-arrow-right-white{ width:12px; height:17px; background-position:-142px -184px; }
+.ycon-arrow-right{ width:12px; height:17px; background-position:-155px -184px; }
+

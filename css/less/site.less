@@ -1,6 +1,6 @@
-@primary-color: #812d2a; 
-@secondary-color: #089bdf;  
-@third-color: #b6967e;  
+@primary-color: #fed61c;  //brand-primary
+@secondary-color: #ffb400;  //brand-warning
+@third-color: #f09029;  //brand-danger
 /*
 FUNÇÕES PADRÕES START
 *********************************************************************/
@@ -28,21 +28,24 @@ NON-RESPONSIVE START
 **********************************************************************************************/
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
 .container {max-width: none !important;width: 960px;}
-.navbar-nav > li > a {padding-top: 15px;padding-bottom:15px;}
+.navbar-nav > li > a {padding-top: 20px;padding-bottom:20px;}
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */.page-header {margin-bottom: 30px;}.page-header .lead {margin-bottom: 10px;}/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*//* Reset the container *//* Always float the navbar header */.navbar-header {float: left;}/* Undo the collapsing navbar */.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;}.navbar-toggle {display: none;}.navbar-collapse {border-top: 0;}.navbar-brand {margin-left: -15px;}/* Always apply the floated nav */.navbar-nav {float: left;margin: 0;}.navbar-nav > li {float: left;}/* Redeclare since we override the float above */.navbar-nav.navbar-right {float: right;}/* Undo custom dropdowns */.navbar .navbar-nav .open .dropdown-menu {position: absolute;float: left;background-color: #fff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-width: 0 1px 1px;border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}.navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #333;}.navbar .navbar-nav .open .dropdown-menu > li > a:hover,.navbar .navbar-nav .open .dropdown-menu > li > a:focus,.navbar .navbar-nav .open .dropdown-menu > .active > a,.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {color: #fff !important;background-color: @primary-color !important;}.navbar .navbar-nav .open .dropdown-menu > .disabled > a,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #999 !important;background-color: transparent !important;}
 /**********************************************************************************************
 NON-RESPONSIVE END
 */
-::selection {background-color: @primary-color;color: #FFF;}
-::-moz-selection {background-color: @primary-color;color: #FFF;}
+::selection {background-color: @third-color;color: #FFF;}
+::-moz-selection {background-color: @third-color;color: #FFF;}
 small {display: inline-block;line-height: 1.1;}
 textarea {resize:vertical;}
 a, button  {transition: all 0.25s ease 0s;}
+hr.lg {border-width:3px;border-color: #1e1e1e;}
 /*
 FONTS START
 **********************************************************************************************/
-.btn {font-family: 'robotoblack', Arial, sans-serif;font-weight: normal;}
+.btn, .site-header .navbar-nav, .header-right, .site-footer {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
+.footer-header {font-family: 'GothamLightItalic', Arial, sans-serif;font-weight: normal;}
+.site-footer small {font-family: Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
 */
@@ -52,13 +55,51 @@ ESTRUTURA START
 .extra-header, .extra-central, .extra-footer {min-width: 960px;}
 .extra-header {
 	.site-header {}
+    .line-1 {background: url(../imagem/site/bg-header.jpg) no-repeat center top;height: 90px;}
 	.navbar {border:0;margin:0;.border-radius(0);}
+    .navbar-nav {
+        text-transform: uppercase;font-size: 16px;width: 100%;text-align: center;
+        > li {float: none;display: inline-block;}
+    }
+    .social-header {
+        a {
+            display: inline-block;vertical-align: middle;
+            + a {margin-left: 15px;}
+        }
+    }
+    .header-right {
+        color: #000;text-align: right;padding-top:34px;
+        span {display: inline-block;}
+        > .content {display: inline-block;background: #FFF;height: 56px;padding:14px 5px 14px 15px;margin-right:34px;}
+    }
+    .phone-header {
+        margin-left: 30px;
+        > .content {display: inline-block;vertical-align: middle;line-height: 1;}
+    }
 }
 .extra-central {
+    padding:20px 0 30px;
 	.site-central {}
 }
+.extra-social {
+    text-align: center;background: url(../imagem/site/mosaico.jpg) repeat center;
+    .extra-1, .extra-2, .content {display: inline-block;}
+    .extra-1 {background: url(../imagem/site/bg-social-left.png) repeat-y left center;padding-left:93px;}
+    .extra-2 {
+        background: url(../imagem/site/bg-social-right.png) repeat-y right center;padding-right:93px;
+    }
+    .content {
+        padding:40px 40px;background: #FFF;
+        > a {
+            + a {margin-left: 15px;}
+        }
+    }
+}
 .extra-footer {
+    background: #000;text-align: center;color: #e1e1e1;padding:18px 0;
 	.site-footer {}
+    .footer-header {text-transform: uppercase;display: block;font-size: 18px;color: #FFF;margin:15px 0;}
+    small {font-size: 10px;}
 }
 /**********************************************************************************************
 ESTRUTURA END
@@ -69,6 +110,23 @@ CLASSES START
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
 .btn-gray {background: #EEE;color:#C93F2A;}
 .btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+.btn {
+    text-transform: uppercase;
+    .ycon-arrow-right-white, .ycon-arrow-right {margin-left: 15px;margin-top:-3px;}
+}
+.btn-border {
+    border:3px solid;background-color:transparent;
+    &:hover {color: #FFF;}
+    &.btn-warning {border-color: @secondary-color;color: @secondary-color;}
+    &.btn-primary {border-color: @primary-color;color: @primary-color;}
+    &.btn-default {
+        border-color: #cecece;color: #3d3d3d;
+        &:hover {color: #000;}
+    }
+}
+.box-galeria {
+    .box-bg {background: #fed61c;}
+}
 
 .cycle-nav {
 	span {display: inline-block;cursor: pointer;}
