@@ -120,6 +120,10 @@ hr.lg {
 /*
 FONTS START
 **********************************************************************************************/
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
 .btn,
 .site-header .navbar-nav,
 .header-right,
@@ -127,7 +131,8 @@ FONTS START
   font-family: 'GothamBlack', Arial, sans-serif;
   font-weight: normal;
 }
-.footer-header {
+.footer-header,
+.box-bg .box-header .media-heading {
   font-family: 'GothamLightItalic', Arial, sans-serif;
   font-weight: normal;
 }
@@ -272,6 +277,13 @@ CLASSES START
   margin-left: 15px;
   margin-top: -3px;
 }
+.btn-white {
+  background: #FFF;
+  color: #3d3d3d;
+}
+.btn-white:hover {
+  background-color: #e6e6e6;
+}
 .btn-border {
   border: 3px solid;
   background-color: transparent;
@@ -294,8 +306,57 @@ CLASSES START
 .btn-border.btn-default:hover {
   color: #000;
 }
+.box-servicos {
+  margin: 0 0 50px;
+}
+.box-galeria,
+.box-video,
+.box-dicas {
+  margin-bottom: 50px;
+  color: #3d3d3d;
+}
+.box-galeria .box-bg,
+.box-video .box-bg,
+.box-dicas .box-bg {
+  padding: 34px 56px 0 34px;
+  height: 320px;
+  background: #dbdae3 url(../imagem/site/bg-box.png) no-repeat right bottom;
+  position: relative;
+  z-index: 3;
+}
+.box-galeria .point,
+.box-video .point,
+.box-dicas .point {
+  position: absolute;
+  top: 0;
+}
+.box-galeria .box-header,
+.box-video .box-header,
+.box-dicas .box-header {
+  margin-bottom: 15px;
+}
+.box-galeria .box-header .media-heading,
+.box-video .box-header .media-heading,
+.box-dicas .box-header .media-heading {
+  font-size: 22px;
+}
 .box-galeria .box-bg {
-  background: #fed61c;
+  background: url(../imagem/site/bg-box-yellow.png) no-repeat right bottom #fed61c;
+}
+.box-galeria .point {
+  right: 100%;
+}
+.box-video .box-bg {
+  background: url(../imagem/site/bg-box-orange.png) no-repeat right bottom #f09029;
+}
+.box-video .point {
+  left: 100%;
+}
+.box-dicas .point {
+  right: 100%;
+}
+.box-dicas .box-header .media-heading {
+  font-size: 25px;
 }
 .cycle-nav span {
   display: inline-block;
@@ -303,6 +364,48 @@ CLASSES START
 }
 .form-control {
   box-shadow: none;
+}
+.galeria-cycle {
+  position: relative;
+  overflow: hidden;
+}
+.galeria-cycle,
+.galeria-cycle .cycle-slideshow,
+.galeria-cycle .link {
+  width: 100%;
+}
+.galeria-cycle,
+.galeria-cycle .cycle-slideshow,
+.galeria-cycle .cycle-slideshow li,
+.galeria-cycle .link {
+  height: 320px;
+}
+.galeria-cycle .link {
+  display: block;
+  background: no-repeat center;
+  background-size: cover;
+}
+.galeria-cycle .cycle-slideshow {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.galeria-cycle .cycle-slideshow li {
+  width: 320px;
+  padding: 0 10px;
+}
+.galeria-cycle .cycle-prev,
+.galeria-cycle .cycle-next {
+  top: 50%;
+  margin-top: -35px;
+  position: absolute;
+  z-index: 3;
+}
+.galeria-cycle .cycle-prev {
+  left: 25px;
+}
+.galeria-cycle .cycle-next {
+  right: 25px;
 }
 .imagem {
   display: inline-block;
@@ -323,6 +426,10 @@ CLASSES START
   vertical-align: middle;
   display: inline-block;
   background-image: url(../imagem/site/ycon.png);
+}
+.pixel {
+  width: 100%;
+  height: 100%;
 }
 .space {
   width: 1%;

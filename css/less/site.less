@@ -43,8 +43,8 @@ hr.lg {border-width:3px;border-color: #1e1e1e;}
 /*
 FONTS START
 **********************************************************************************************/
-.btn, .site-header .navbar-nav, .header-right, .site-footer {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
-.footer-header {font-family: 'GothamLightItalic', Arial, sans-serif;font-weight: normal;}
+h1 strong, h2 strong, h3 strong, h4 strong, .btn, .site-header .navbar-nav, .header-right, .site-footer {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
+.footer-header, .box-bg .box-header .media-heading {font-family: 'GothamLightItalic', Arial, sans-serif;font-weight: normal;}
 .site-footer small {font-family: Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
@@ -56,7 +56,7 @@ ESTRUTURA START
 .extra-header {
 	.site-header {}
     .line-1 {background: url(../imagem/site/bg-header.jpg) no-repeat center top;height: 90px;}
-	.navbar {border:0;margin:0;.border-radius(0);}
+    .navbar {border:0;margin:0;.border-radius(0);}
     .navbar-nav {
         text-transform: uppercase;font-size: 16px;width: 100%;text-align: center;
         > li {float: none;display: inline-block;}
@@ -79,7 +79,7 @@ ESTRUTURA START
 }
 .extra-central {
     padding:20px 0 30px;
-	.site-central {}
+    .site-central {}
 }
 .extra-social {
     text-align: center;background: url(../imagem/site/mosaico.jpg) repeat center;
@@ -97,7 +97,7 @@ ESTRUTURA START
 }
 .extra-footer {
     background: #000;text-align: center;color: #e1e1e1;padding:18px 0;
-	.site-footer {}
+    .site-footer {}
     .footer-header {text-transform: uppercase;display: block;font-size: 18px;color: #FFF;margin:15px 0;}
     small {font-size: 10px;}
 }
@@ -114,6 +114,10 @@ CLASSES START
     text-transform: uppercase;
     .ycon-arrow-right-white, .ycon-arrow-right {margin-left: 15px;margin-top:-3px;}
 }
+.btn-white {
+    background: #FFF;color: #3d3d3d;
+    &:hover {background-color: darken(#FFF, 10%)}
+}
 .btn-border {
     border:3px solid;background-color:transparent;
     &:hover {color: #FFF;}
@@ -124,8 +128,31 @@ CLASSES START
         &:hover {color: #000;}
     }
 }
+.box-servicos {
+    margin:0 0 50px;
+}
+.box-galeria, .box-video, .box-dicas {
+    margin-bottom: 50px;color: #3d3d3d;
+    .box-bg {padding:34px 56px 0 34px;height: 320px;background: #dbdae3 url(../imagem/site/bg-box.png) no-repeat right bottom;position: relative;z-index: 3;}
+    .point {position: absolute;top: 0;}
+    .box-header {
+        margin-bottom: 15px;
+        .media-heading {font-size: 22px;}
+    }
+}
 .box-galeria {
-    .box-bg {background: #fed61c;}
+    .box-bg {background: url(../imagem/site/bg-box-yellow.png) no-repeat right bottom #fed61c;}
+    .point {right: 100%;}
+}
+.box-video {
+    .box-bg {background: url(../imagem/site/bg-box-orange.png) no-repeat right bottom #f09029;}
+    .point {left: 100%;}
+}
+.box-dicas {
+    .point {right: 100%;}
+    .box-header {
+        .media-heading {font-size: 25px;}
+    }
 }
 
 .cycle-nav {
@@ -133,11 +160,26 @@ CLASSES START
 }
 
 .form-control {box-shadow:none;}
+.galeria-cycle {
+    position: relative;overflow: hidden;
+    &, .cycle-slideshow, .link {width: 100%;}
+    &, .cycle-slideshow, .cycle-slideshow li, .link {height: 320px;}
+    .link {display: block;background:no-repeat center;background-size: cover;}
+    .cycle-slideshow {
+        overflow: hidden;position: relative;z-index: 2;
+        li {width: 320px;padding:0 10px;}
+    }
+    .cycle-prev, .cycle-next {top: 50%;margin-top:-35px;position: absolute;z-index: 3;}
+    .cycle-prev {left: 25px;}
+    .cycle-next {right: 25px;}
+}
 
 .imagem {display: inline-block;overflow: hidden;max-width: 100%;}
 .imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
 .inline-block {display:inline-block;}
 [class^='ycon-'], [class*='ycon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/ycon.png);}
+
+.pixel {width: 100%;height: 100%;}
 
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
 .relative {position: relative;}
@@ -155,14 +197,14 @@ JQUERY UI END
 
 }
 @media (max-width: 767px) {
- /*    .site-geral:before {content:"TABLET";}*/
+   /*    .site-geral:before {content:"TABLET";}*/
 }
 @media (max-width: 480px) {
- /*#GERAL:before {content:"MOBILE";}*/
+   /*#GERAL:before {content:"MOBILE";}*/
 }
 @media (min-width: 768px) and (max-width: 980px) {
 
 }
 @media (min-width: 981px) and (max-width: 1200px) {
- /*#GERAL:before {content:"ACIMA DE TABLET";}*/
+   /*#GERAL:before {content:"ACIMA DE TABLET";}*/
 }
