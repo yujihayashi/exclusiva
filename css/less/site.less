@@ -43,11 +43,12 @@ hr.lg {border-width:3px;border-color: #1e1e1e;}
 /*
 FONTS START
 **********************************************************************************************/
-.lista-vantagens .media-heading, .ribbon, .box .media-heading, .chamada .desc strong, .servico .media-heading, .box-servicos .box-header .media-heading, .box-comentario .box-header .media-heading, h1 strong, h2 strong, h3 strong, h4 strong, .btn, .site-header .navbar-nav, .header-right, .site-footer {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
+.lista-box .title, .lista-vantagens .media-heading, .ribbon, .box .media-heading, .chamada .desc strong, .servico .media-heading, .box-servicos .box-header .media-heading, .box-comentario .box-header .media-heading, h1 strong, h2 strong, h3 strong, h4 strong, .btn, .site-header .navbar-nav, .header-right, .site-footer {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
 .chamada .desc, .chamada .resumo, .chamada .resumo h1, .box-comentario .autor, .footer-header, .box-bg .box-header .media-heading {font-family: 'GothamLightItalic', Arial, sans-serif;font-weight: normal;}
 .interna .box-comentario .media-heading, .interna .box-comentario .comentario {font-family: 'GothamLight', Arial, sans-serif;font-weight: normal;}
 .conteudo-header, .box-comentario .comentario {font-family: 'GothamBold', Arial, sans-serif;font-weight: normal;}
 .interna .box-comentario .autor, .conteudo-resumo {font-family: 'mission_scriptregular', Arial, sans-serif;font-weight: normal;}
+.servico-destaque .title {font-family: 'coneria_script_demoregular', Arial, sans-serif;font-weight: normal;}
 .site-footer small {font-family: Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
@@ -207,9 +208,10 @@ CLASSES START
     .autor {font-size: 18px;}
     .comentario {font-size: 14px;margin:0 0 15px;line-height: 1.2;}
 }
-.interna {
+.page-comentario {
+    background: #fed61c;margin-bottom: -50px;padding:15px 0 30px;
     .box-comentario {
-        margin-bottom: -50px;background-image:none;
+        background-image:none;height: auto;
         .box-header {
             .media-heading {font-size: 30px;text-transform: uppercase;}
         }
@@ -266,6 +268,21 @@ CLASSES START
         + .media {margin-top:0;}
     }
 }
+.lista-box {
+    > li, .imagem, .link {height: 290px;overflow: hidden;}
+    .imagem, .link {width: 100%;}
+    .imagem, .link, .title, .mask {display: block;}
+    .link {position: relative;background:center no-repeat rgba(249, 138, 58);background-size:cover;}
+    .mask {background: url(../imagem/site/bg-mask.png) repeat-x bottom;position: absolute;left: 0;bottom: 0;right: 0;height: 150px;z-index: 2;}
+    .imagem {position: relative;z-index: 1;}
+    .title {position: absolute;left: 0;bottom: 0;width: 200px;padding:18px 28px;color: #FFF;font-size: 20px;text-transform: uppercase;line-height: 1;z-index: 3;height: 94px;}
+    .title-content {display: inline-block;max-width: 96%;position: relative;z-index: 2;}
+    .title-text {display: block;}
+    .plus {position: absolute;right: 0;bottom: 0;z-index: 3;}
+    .plus-lg {display: none;margin-top:15px;}
+    .title-mask {position: absolute;left: 0;right: 0;top: 0;bottom: 0;background-color: rgba(249, 138, 58, .8);z-index: 1;display: none;}
+
+}
 
 .pixel {width: 100%;height: 100%;}
 .page-header {
@@ -307,7 +324,6 @@ CLASSES START
         background: url(../imagem/site/ribbon-right.png) no-repeat right top;padding-right:16px;
         > span {background: #000;padding:6px 20px;height: 40px;}
     }
-
 }
 
 .servico {
@@ -315,6 +331,32 @@ CLASSES START
     .imagem {display: inline-block;width: 95px;height: 102px;background: #ffb400;text-align: center;}
     .media-heading {font-size: 25px;color: #3d3d3d;text-transform: uppercase;margin:5px 0;}
     .media-body {line-height: 1.2;}
+}
+.servico-destaque {
+    position: relative;margin:0 0 50px;text-align: center;
+    &, .link, .content {height: 290px;width: 100%;display: block;}
+    .link {
+        background: no-repeat center;background-size: cover;padding:0 210px;
+        span {display: block;}
+        &:hover {
+            text-decoration: none;
+            .title {color: darken(#f98a3a, 15%);}
+            .desc {color: darken(#595959, 15%);}
+        }
+    }
+    .plus {position: absolute;right:0;bottom: 0;}
+    .text {max-width: 96%;vertical-align: middle;}
+    .text, .space {display: inline-block !important;}
+    .title, .desc {transition:all 0.25s ease 0s;}
+    .title {
+        font-size: 70px;color: #f98a3a;
+        &:after {content:" ";display: block;width: 80px;height: 1px;background: #b2b1b0;margin:0 auto 20px;}
+    }
+    .desc {font-size: 16px;color: #595959;}
+}
+.img-thumbnail {
+    &.pull-left {margin-right: 15px;margin-bottom: 15px;}
+    &.pull-right {margin-left: 15px;margin-bottom: 15px;}
 }
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
 .relative {position: relative;}

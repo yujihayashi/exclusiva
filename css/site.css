@@ -1,17 +1,7 @@
-/*
-FUNÇÕES PADRÕES START
-*********************************************************************/
 .clear,
 .first {
   clear: both;
 }
-/*********************************************************************
-FUNÇÕES PADRÕES END
-*/
-/*
-NON-RESPONSIVE START
-**********************************************************************************************/
-/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
 .container {
   max-width: none !important;
   width: 960px;
@@ -20,21 +10,15 @@ NON-RESPONSIVE START
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
-/* Finesse the page header spacing */
 .page-header {
   margin-bottom: 30px;
 }
 .page-header .lead {
   margin-bottom: 10px;
 }
-/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*/
-/* Reset the container */
-/* Always float the navbar header */
 .navbar-header {
   float: left;
 }
-/* Undo the collapsing navbar */
 .navbar-collapse {
   display: block !important;
   height: auto !important;
@@ -50,7 +34,6 @@ NON-RESPONSIVE START
 .navbar-brand {
   margin-left: -15px;
 }
-/* Always apply the floated nav */
 .navbar-nav {
   float: left;
   margin: 0;
@@ -58,21 +41,19 @@ NON-RESPONSIVE START
 .navbar-nav > li {
   float: left;
 }
-/* Redeclare since we override the float above */
 .navbar-nav.navbar-right {
   float: right;
 }
-/* Undo custom dropdowns */
 .navbar .navbar-nav .open .dropdown-menu {
   position: absolute;
   float: left;
   background-color: #fff;
   border: 1px solid #cccccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0,0,0,0.15);
   border-width: 0 1px 1px;
   border-radius: 0 0 4px 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
 }
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
   color: #333;
@@ -91,9 +72,6 @@ NON-RESPONSIVE START
   color: #999 !important;
   background-color: transparent !important;
 }
-/**********************************************************************************************
-NON-RESPONSIVE END
-*/
 ::selection {
   background-color: #f09029;
   color: #FFF;
@@ -117,9 +95,7 @@ hr.lg {
   border-width: 3px;
   border-color: #1e1e1e;
 }
-/*
-FONTS START
-**********************************************************************************************/
+.lista-box .title,
 .lista-vantagens .media-heading,
 .ribbon,
 .box .media-heading,
@@ -162,16 +138,14 @@ h4 strong,
   font-family: 'mission_scriptregular', Arial, sans-serif;
   font-weight: normal;
 }
+.servico-destaque .title {
+  font-family: 'coneria_script_demoregular', Arial, sans-serif;
+  font-weight: normal;
+}
 .site-footer small {
   font-family: Arial, sans-serif;
   font-weight: normal;
 }
-/**********************************************************************************************
-FONTS END
-*/
-/*
-ESTRUTURA START
-**********************************************************************************************/
 .extra-header,
 .extra-central,
 .extra-footer {
@@ -274,12 +248,6 @@ ESTRUTURA START
 .home .extra-central {
   padding-top: 20px;
 }
-/**********************************************************************************************
-ESTRUTURA END
-*/
-/*
-CLASSES START
-**********************************************************************************************/
 [class^='lista-'],
 [class^='lista-'],
 [class^='menu-'],
@@ -369,8 +337,8 @@ CLASSES START
   line-height: 1;
 }
 .box-chamadas .chamada .resumo,
-.box-chamadas .chamada .resumo h1,
 .box-chamadas .chamada .resumo a,
+.box-chamadas .chamada .resumo h1,
 .box-chamadas .chamada .resumo h1 a {
   color: #FFF;
 }
@@ -500,15 +468,20 @@ CLASSES START
   margin: 0 0 15px;
   line-height: 1.2;
 }
-.interna .box-comentario {
+.page-comentario {
+  background: #fed61c;
   margin-bottom: -50px;
-  background-image: none;
+  padding: 15px 0 30px;
 }
-.interna .box-comentario .box-header .media-heading {
+.page-comentario .box-comentario {
+  background-image: none;
+  height: auto;
+}
+.page-comentario .box-comentario .box-header .media-heading {
   font-size: 30px;
   text-transform: uppercase;
 }
-.interna .box-comentario .comentario {
+.page-comentario .box-comentario .comentario {
   font-size: 20px;
 }
 .box-chamadas-internas .box-header {
@@ -631,6 +604,82 @@ CLASSES START
 .lista-vantagens .media + .media {
   margin-top: 0;
 }
+.lista-box > li,
+.lista-box .imagem,
+.lista-box .link {
+  height: 290px;
+  overflow: hidden;
+}
+.lista-box .imagem,
+.lista-box .link {
+  width: 100%;
+}
+.lista-box .imagem,
+.lista-box .link,
+.lista-box .title,
+.lista-box .mask {
+  display: block;
+}
+.lista-box .link {
+  position: relative;
+  background: center no-repeat #f98a3a;
+  background-size: cover;
+}
+.lista-box .mask {
+  background: url(../imagem/site/bg-mask.png) repeat-x bottom;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 150px;
+  z-index: 2;
+}
+.lista-box .imagem {
+  position: relative;
+  z-index: 1;
+}
+.lista-box .title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 18px 28px;
+  color: #FFF;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1;
+  z-index: 3;
+  height: 94px;
+}
+.lista-box .title-content {
+  display: inline-block;
+  max-width: 96%;
+  position: relative;
+  z-index: 2;
+}
+.lista-box .title-text {
+  display: block;
+}
+.lista-box .plus {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.lista-box .plus-lg {
+  display: none;
+  margin-top: 15px;
+}
+.lista-box .title-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(249,138,58,0.8);
+  z-index: 1;
+  display: none;
+}
 .pixel {
   width: 100%;
   height: 100%;
@@ -651,10 +700,10 @@ CLASSES START
   font-size: 60px;
 }
 .page-header h1,
-.page-header h2,
-.page-header h3,
 .page-header h1 a,
+.page-header h2,
 .page-header h2 a,
+.page-header h3,
 .page-header h3 a {
   color: #FFF;
 }
@@ -718,7 +767,7 @@ CLASSES START
   top: 0;
   bottom: 0;
   width: 40px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
   text-align: center;
   padding: 163px 0;
 }
@@ -777,6 +826,76 @@ CLASSES START
 .servico .media-body {
   line-height: 1.2;
 }
+.servico-destaque {
+  position: relative;
+  margin: 0 0 50px;
+  text-align: center;
+}
+.servico-destaque,
+.servico-destaque .link,
+.servico-destaque .content {
+  height: 290px;
+  width: 100%;
+  display: block;
+}
+.servico-destaque .link {
+  background: no-repeat center;
+  background-size: cover;
+  padding: 0 210px;
+}
+.servico-destaque .link span {
+  display: block;
+}
+.servico-destaque .link:hover {
+  text-decoration: none;
+}
+.servico-destaque .link:hover .title {
+  color: #e06207;
+}
+.servico-destaque .link:hover .desc {
+  color: #333333;
+}
+.servico-destaque .plus {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.servico-destaque .text {
+  max-width: 96%;
+  vertical-align: middle;
+}
+.servico-destaque .text,
+.servico-destaque .space {
+  display: inline-block !important;
+}
+.servico-destaque .title,
+.servico-destaque .desc {
+  transition: all 0.25s ease 0s;
+}
+.servico-destaque .title {
+  font-size: 70px;
+  color: #f98a3a;
+}
+.servico-destaque .title:after {
+  content: " ";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #b2b1b0;
+  margin: 0 auto 20px;
+}
+.servico-destaque .desc {
+  font-size: 16px;
+  color: #595959;
+}
+.img-thumbnail.pull-left {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.img-thumbnail.pull-right {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
 .space {
   width: 1%;
   display: inline-block;
@@ -785,22 +904,4 @@ CLASSES START
 }
 .relative {
   position: relative;
-}
-/**********************************************************************************************
-CLASSES END
-*/
-/*
-JQUERY UI START
-**********************************************************************************************/
-/**********************************************************************************************
-JQUERY UI END
-*/
-@media (max-width: 767px) {
-  /*    .site-geral:before {content:"TABLET";}*/
-}
-@media (max-width: 480px) {
-  /*#GERAL:before {content:"MOBILE";}*/
-}
-@media (min-width: 981px) and (max-width: 1200px) {
-  /*#GERAL:before {content:"ACIMA DE TABLET";}*/
 }
