@@ -120,6 +120,9 @@ hr.lg {
 /*
 FONTS START
 **********************************************************************************************/
+.lista-vantagens .media-heading,
+.ribbon,
+.box .media-heading,
 .chamada .desc strong,
 .servico .media-heading,
 .box-servicos .box-header .media-heading,
@@ -144,8 +147,19 @@ h4 strong,
   font-family: 'GothamLightItalic', Arial, sans-serif;
   font-weight: normal;
 }
+.interna .box-comentario .media-heading,
+.interna .box-comentario .comentario {
+  font-family: 'GothamLight', Arial, sans-serif;
+  font-weight: normal;
+}
+.conteudo-header,
 .box-comentario .comentario {
   font-family: 'GothamBold', Arial, sans-serif;
+  font-weight: normal;
+}
+.interna .box-comentario .autor,
+.conteudo-resumo {
+  font-family: 'mission_scriptregular', Arial, sans-serif;
   font-weight: normal;
 }
 .site-footer small {
@@ -486,6 +500,58 @@ CLASSES START
   margin: 0 0 15px;
   line-height: 1.2;
 }
+.interna .box-comentario {
+  margin-bottom: -50px;
+  background-image: none;
+}
+.interna .box-comentario .box-header .media-heading {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.interna .box-comentario .comentario {
+  font-size: 20px;
+}
+.box-chamadas-internas .box-header {
+  margin: 20px 0 30px;
+}
+.box-interna .box-header {
+  text-transform: uppercase;
+  margin: 0 0 40px;
+}
+.box .imagem {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  display: block;
+}
+.box .content {
+  background: url(../imagem/site/bg-box.jpg) no-repeat left top;
+  height: 100px;
+  padding: 16px 40px 0 20px;
+  line-height: 1.2;
+}
+.box .media-heading {
+  font-size: 22px;
+}
+.box .media-heading,
+.box .media-heading a {
+  color: #3d3d3d;
+}
+.conteudo-resumo {
+  font-size: 28px;
+  color: #acab9d;
+  line-height: 1.2;
+  margin: 15px 0 40px;
+}
+.conteudo-texto {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 30px 0;
+}
+.conteudo-header {
+  font-size: 20px;
+  text-transform: uppercase;
+}
 .cycle-nav span {
   display: inline-block;
   cursor: pointer;
@@ -555,6 +621,16 @@ CLASSES START
   display: inline-block;
   background-image: url(../imagem/site/ycon.png);
 }
+.lista-vantagens .media-heading {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.lista-vantagens .media {
+  margin: 0 0 30px;
+}
+.lista-vantagens .media + .media {
+  margin-top: 0;
+}
 .pixel {
   width: 100%;
   height: 100%;
@@ -586,6 +662,101 @@ CLASSES START
   display: inline-block;
   border: 1px solid #FFF;
   padding: 20px 40px;
+}
+.page-galeria {
+  margin: 0 0 40px;
+}
+.page-galeria .page-heading {
+  background: url(../imagem/site/bg-yellow.jpg) repeat center top;
+  padding: 36px 0;
+}
+.page-galeria .page-heading .media-heading {
+  font-size: 32px;
+  line-height: 1.1;
+  text-align: center;
+}
+.page-galeria .page-content {
+  position: relative;
+}
+.page-galeria .ribbon-content {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: -19px;
+  text-align: center;
+}
+.page-galeria .galeria-cycle-lg {
+  position: relative;
+}
+.page-galeria .galeria-cycle-lg,
+.page-galeria .galeria-cycle-lg .cycle-slideshow,
+.page-galeria .galeria-cycle-lg .link {
+  width: 100%;
+}
+.page-galeria .galeria-cycle-lg,
+.page-galeria .galeria-cycle-lg .cycle-slideshow,
+.page-galeria .galeria-cycle-lg .cycle-slideshow li,
+.page-galeria .galeria-cycle-lg .link {
+  height: 350px;
+}
+.page-galeria .galeria-cycle-lg .cycle-slideshow {
+  position: relative;
+  z-index: 1;
+}
+.page-galeria .galeria-cycle-lg .cycle-slideshow li {
+  width: 480px;
+}
+.page-galeria .galeria-cycle-lg .link {
+  display: block;
+  position: relative;
+}
+.page-galeria .galeria-cycle-lg .cycle-prev,
+.page-galeria .galeria-cycle-lg .cycle-next {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 163px 0;
+}
+.page-galeria .galeria-cycle-lg .cycle-prev {
+  left: 0;
+}
+.page-galeria .galeria-cycle-lg .cycle-next {
+  right: 0;
+}
+.page-galeria .galeria-cycle-lg .zoom {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -20px;
+  display: none;
+}
+.ribbon {
+  display: inline-block;
+  text-transform: uppercase;
+  background: url(../imagem/site/ribbon-left.png) no-repeat left top;
+  padding-left: 16px;
+  font-size: 18px;
+  color: #fced08;
+  text-align: center;
+}
+.ribbon span {
+  display: block;
+}
+.ribbon > span {
+  background: url(../imagem/site/ribbon-right.png) no-repeat right top;
+  padding-right: 16px;
+}
+.ribbon > span > span {
+  background: #000;
+  padding: 6px 20px;
+  height: 40px;
 }
 .servico {
   margin: 0 0 15px;

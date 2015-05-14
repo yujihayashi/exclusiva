@@ -6,13 +6,19 @@
 .ycon-cycle-next{ width:44px; height:70px; background-position:-46px -113px; }
 .ycon-aspas-right{ width:68px; height:45px; background-position:-91px -113px; }
 .ycon-aspas-left{ width:68px; height:45px; background-position:-1px -184px; }
+.ycon-zoom{ width:43px; height:40px; background-position:-70px -184px; }
 .ycon-instagram{ width:158px; height:36px; background-position:-1px -230px; }
+.ycon-address-gray{ width:20px; height:31px; background-position:-114px -184px; }
 .ycon-facebook{ width:159px; height:31px; background-position:-1px -267px; }
 .ycon-twitter{ width:170px; height:31px; background-position:-1px -299px; }
-.ycon-phone-gray{ width:26px; height:26px; background-position:-70px -184px; }
-.ycon-instagram-sm{ width:22px; height:22px; background-position:-97px -184px; }
+.ycon-phone-gray{ width:26px; height:26px; background-position:-135px -184px; }
+.ycon-whatsapp{ width:24px; height:24px; background-position:-1px -331px; }
+.ycon-mail-gray{ width:28px; height:22px; background-position:-26px -331px; }
+.ycon-instagram-sm{ width:22px; height:22px; background-position:-55px -331px; }
 .ycon-facebook-sm{ width:11px; height:22px; background-position:-153px -1px; }
-.ycon-twitter-sm{ width:21px; height:18px; background-position:-120px -184px; }
-.ycon-arrow-right-white{ width:12px; height:17px; background-position:-142px -184px; }
-.ycon-arrow-right{ width:12px; height:17px; background-position:-155px -184px; }
+.ycon-cycle-next-sm{ width:11px; height:20px; background-position:-160px -113px; }
+.ycon-cycle-prev-sm{ width:11px; height:20px; background-position:-160px -230px; }
+.ycon-twitter-sm{ width:21px; height:18px; background-position:-78px -331px; }
+.ycon-arrow-right-white{ width:12px; height:17px; background-position:-100px -331px; }
+.ycon-arrow-right{ width:12px; height:17px; background-position:-113px -331px; }
 

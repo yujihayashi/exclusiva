@@ -8,8 +8,8 @@ $(function() {
     });
 
     
-// $('.ver-imagem').prettyPhoto();
-// $('a[rel^="prettyPhoto"]').prettyPhoto();
+$('.ver-imagem').prettyPhoto();
+$('a[rel^="prettyPhoto"]').prettyPhoto();
 });
 $(function() {
     $('.jImgFormat').find('img').each(function() {
