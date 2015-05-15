@@ -270,12 +270,13 @@ CLASSES START
 }
 .lista-box {
     > li, .imagem, .link {height: 290px;overflow: hidden;}
+    > li {background: url(../imagem/site/bg-dicas.png) no-repeat center;}
     .imagem, .link {width: 100%;}
     .imagem, .link, .title, .mask {display: block;}
-    .link {position: relative;background:center no-repeat rgba(249, 138, 58);background-size:cover;}
+    .link {position: relative;background:center no-repeat rgba(249, 138, 58, .8);background-size:cover;}
     .mask {background: url(../imagem/site/bg-mask.png) repeat-x bottom;position: absolute;left: 0;bottom: 0;right: 0;height: 150px;z-index: 2;}
     .imagem {position: relative;z-index: 1;}
-    .title {position: absolute;left: 0;bottom: 0;width: 200px;padding:18px 28px;color: #FFF;font-size: 20px;text-transform: uppercase;line-height: 1;z-index: 3;height: 94px;}
+    .title {position: absolute;left: 0;bottom: 0;width: 290px;padding:18px 28px;color: #FFF;font-size: 20px;text-transform: uppercase;line-height: 1;z-index: 3;height: 94px;}
     .title-content {display: inline-block;max-width: 96%;position: relative;z-index: 2;}
     .title-text {display: block;}
     .plus {position: absolute;right: 0;bottom: 0;z-index: 3;}
@@ -314,6 +315,15 @@ CLASSES START
         .cycle-prev {left: 0;}
         .cycle-next {right: 0;}
         .zoom {position: absolute;z-index: 5;left: 50%;margin-left:-20px;top:50%;margin-top:-20px;display: none;}
+    }
+}
+.pagination {
+    display: inline-block;border:3px solid #f98a3a;
+    > li {
+        display: block;float: left;
+        > a, > span {border:none;}
+        &:first-child {border-right:4px solid #f98a3a;}
+        &:last-child {border-left:4px solid #f98a3a;}
     }
 }
 

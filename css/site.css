@@ -1,7 +1,17 @@
+/*
+FUNÇÕES PADRÕES START
+*********************************************************************/
 .clear,
 .first {
   clear: both;
 }
+/*********************************************************************
+FUNÇÕES PADRÕES END
+*/
+/*
+NON-RESPONSIVE START
+**********************************************************************************************/
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
 .container {
   max-width: none !important;
   width: 960px;
@@ -10,15 +20,21 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
+/* Finesse the page header spacing */
 .page-header {
   margin-bottom: 30px;
 }
 .page-header .lead {
   margin-bottom: 10px;
 }
+/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*/
+/* Reset the container */
+/* Always float the navbar header */
 .navbar-header {
   float: left;
 }
+/* Undo the collapsing navbar */
 .navbar-collapse {
   display: block !important;
   height: auto !important;
@@ -34,6 +50,7 @@
 .navbar-brand {
   margin-left: -15px;
 }
+/* Always apply the floated nav */
 .navbar-nav {
   float: left;
   margin: 0;
@@ -41,19 +58,21 @@
 .navbar-nav > li {
   float: left;
 }
+/* Redeclare since we override the float above */
 .navbar-nav.navbar-right {
   float: right;
 }
+/* Undo custom dropdowns */
 .navbar .navbar-nav .open .dropdown-menu {
   position: absolute;
   float: left;
   background-color: #fff;
   border: 1px solid #cccccc;
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-width: 0 1px 1px;
   border-radius: 0 0 4px 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
   color: #333;
@@ -72,6 +91,9 @@
   color: #999 !important;
   background-color: transparent !important;
 }
+/**********************************************************************************************
+NON-RESPONSIVE END
+*/
 ::selection {
   background-color: #f09029;
   color: #FFF;
@@ -95,6 +117,9 @@ hr.lg {
   border-width: 3px;
   border-color: #1e1e1e;
 }
+/*
+FONTS START
+**********************************************************************************************/
 .lista-box .title,
 .lista-vantagens .media-heading,
 .ribbon,
@@ -146,6 +171,12 @@ h4 strong,
   font-family: Arial, sans-serif;
   font-weight: normal;
 }
+/**********************************************************************************************
+FONTS END
+*/
+/*
+ESTRUTURA START
+**********************************************************************************************/
 .extra-header,
 .extra-central,
 .extra-footer {
@@ -248,6 +279,12 @@ h4 strong,
 .home .extra-central {
   padding-top: 20px;
 }
+/**********************************************************************************************
+ESTRUTURA END
+*/
+/*
+CLASSES START
+**********************************************************************************************/
 [class^='lista-'],
 [class^='lista-'],
 [class^='menu-'],
@@ -337,8 +374,8 @@ h4 strong,
   line-height: 1;
 }
 .box-chamadas .chamada .resumo,
-.box-chamadas .chamada .resumo a,
 .box-chamadas .chamada .resumo h1,
+.box-chamadas .chamada .resumo a,
 .box-chamadas .chamada .resumo h1 a {
   color: #FFF;
 }
@@ -610,6 +647,9 @@ h4 strong,
   height: 290px;
   overflow: hidden;
 }
+.lista-box > li {
+  background: url(../imagem/site/bg-dicas.png) no-repeat center;
+}
 .lista-box .imagem,
 .lista-box .link {
   width: 100%;
@@ -622,7 +662,7 @@ h4 strong,
 }
 .lista-box .link {
   position: relative;
-  background: center no-repeat #f98a3a;
+  background: center no-repeat rgba(249, 138, 58, 0.8);
   background-size: cover;
 }
 .lista-box .mask {
@@ -642,7 +682,7 @@ h4 strong,
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 200px;
+  width: 290px;
   padding: 18px 28px;
   color: #FFF;
   font-size: 20px;
@@ -676,7 +716,7 @@ h4 strong,
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(249,138,58,0.8);
+  background-color: rgba(249, 138, 58, 0.8);
   z-index: 1;
   display: none;
 }
@@ -700,10 +740,10 @@ h4 strong,
   font-size: 60px;
 }
 .page-header h1,
-.page-header h1 a,
 .page-header h2,
-.page-header h2 a,
 .page-header h3,
+.page-header h1 a,
+.page-header h2 a,
 .page-header h3 a {
   color: #FFF;
 }
@@ -767,7 +807,7 @@ h4 strong,
   top: 0;
   bottom: 0;
   width: 40px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   text-align: center;
   padding: 163px 0;
 }
@@ -785,6 +825,24 @@ h4 strong,
   top: 50%;
   margin-top: -20px;
   display: none;
+}
+.pagination {
+  display: inline-block;
+  border: 3px solid #f98a3a;
+}
+.pagination > li {
+  display: block;
+  float: left;
+}
+.pagination > li > a,
+.pagination > li > span {
+  border: none;
+}
+.pagination > li:first-child {
+  border-right: 4px solid #f98a3a;
+}
+.pagination > li:last-child {
+  border-left: 4px solid #f98a3a;
 }
 .ribbon {
   display: inline-block;
@@ -904,4 +962,22 @@ h4 strong,
 }
 .relative {
   position: relative;
+}
+/**********************************************************************************************
+CLASSES END
+*/
+/*
+JQUERY UI START
+**********************************************************************************************/
+/**********************************************************************************************
+JQUERY UI END
+*/
+@media (max-width: 767px) {
+  /*    .site-geral:before {content:"TABLET";}*/
+}
+@media (max-width: 480px) {
+  /*#GERAL:before {content:"MOBILE";}*/
+}
+@media (min-width: 981px) and (max-width: 1200px) {
+  /*#GERAL:before {content:"ACIMA DE TABLET";}*/
 }
